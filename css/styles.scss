@@ -1,0 +1,125 @@
+
+$primary: #b41417;
+$cherry-red: #ad011d;
+$dark-black: #111;
+
+
+* {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+.header {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;       
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+
+  h1 {
+    color: $cherry-red;
+    font-size: clamp(2rem, 8vw, 6rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 90%;
+    word-wrap: break-word;
+  }
+
+  .index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .header__btn {
+      a {
+        background-color: $cherry-red;
+        color: white;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: 0.3s;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        padding: clamp(0.6rem, 1vw, 1rem) clamp(1.5rem, 3vw, 2.5rem);
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: white;
+          color: $cherry-red;
+        }
+      }
+    }
+
+    h2 {
+      color: $cherry-red;
+      font-size: clamp(1.2rem, 4vw, 2.5rem);
+      text-align: center;
+      margin: 0;
+      max-width: 90%;
+      word-wrap: break-word;
+    }
+  }
+}
+
+
+.btn-success {
+  background-color: $primary;
+  &:hover {
+    background-color: grey;
+  }
+}
+
+
+.bg-img{
+   height: 100vh;
+   width: 100vw;
+   object-fit: cover;
+   filter: brightness(0.2);
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: -1;
+
+}
+
+.main__body{
+   overflow-x: hidden;
+}
+
+
+.container h1,
+.container h2 {
+    color: white;
+}
